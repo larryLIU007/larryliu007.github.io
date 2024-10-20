@@ -44,6 +44,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Remove .gitmodules if it exists
+        run: rm -f .gitmodules
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
